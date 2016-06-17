@@ -9,27 +9,46 @@
     <title>UnderscoreJs</title>
     <meta name="description" content="UnderscoreJs">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app/app.css">
 </head>
 
 <body>
     <div class="site-container">
         <h1 class="text-center">UnderscoreJs</h1>
         <hr>
-
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, repellat quidem maiores necessitatibus sunt eveniet. Nesciunt obcaecati sunt id reprehenderit tenetur, voluptatibus, deleniti, dolores ducimus rerum quas nulla velit ut?
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, repellat quidem maiores necessitatibus sunt eveniet. Nesciunt obcaecati sunt id reprehenderit tenetur, voluptatibus, deleniti, dolores ducimus rerum quas nulla velit ut?
-        </p>
-        <ul>
-            <li>Adam</li>
-            <li>Bertil</li>
-            <li>Ceasar</li>
-            <li>David</li>
-            <li>Erik</li>
-        </ul>
+        
+        <div>
+            <p>
+                We are following along the Pluralsight course <a href="https://app.pluralsight.com/library/courses/underscore-fundamentals/table-of-contents">Underscore.js Fundamentals</a>.
+            </p>
+            <h2>Live testing and unit testing</h2>
+            <p>
+                Some things we are going to test live on the site, while some things we are going to test with Jasmine Javascript test framework. It will be fun!
+            </p>
+            <h2>What is underscorejs?</h2>
+            <p>
+                This Javascript library provides around 80 functions that helps with every day Javascript tasks, including templating. It requires no dependencies. It works in the browser and also in NodeJS.
+            </p>
+            <p>
+                Underscorejs checks if there is a native Javascript implementation of a function and will defer to that in that case.
+            </p>
+            <p>
+                Underscore has two styles of coding; functional and object style, which to use is a matter of preference.
+            </p>
+            <h3>Functional</h3>
+            <div>
+                <code>
+                    var m = _.map(names, function(name) { return "Hello " + name; });
+                </code>
+            </div>
+            <h3>Object style</h3>
+            <div>
+                <code>
+                    var m = _(names).map(function() { return "Hello " + name; });
+                </code>
+            </div>
+        </div>
+       
 
     </div>
 
