@@ -1,0 +1,22 @@
+{
+  "name": "underscorejs",
+  "version": "1.0.0",
+  "description": "I need to learn more about this lib. And what better way to do that than a Pluralsight course?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrikmathiesen/underscoreJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henrikmathiesen/underscoreJs/issues"
+  },
+  "homepage": "https://github.com/henrikmathiesen/underscoreJs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
