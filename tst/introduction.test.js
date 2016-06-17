@@ -30,4 +30,18 @@ describe("Here we make some fun and interesting tests that comes to mind from th
         expect(isArray).toBe(false);
     });
 
+    it("should be an object", function () {
+        var myObj = { name: "Henry" };
+        var isObject = myObj === Object(myObj) && Object.prototype.toString.call(myObj) !== '[object Array]';
+
+        expect(isObject).toBe(true);
+    });
+
+    it("should not be an object", function () {
+        var myArray = ['Adam', 'Bertil', 'Ceasar']; 
+        var isObject = myArray === Object(myArray) && Object.prototype.toString.call(myArray) !== '[object Array]';
+
+        expect(isObject).toBe(false);
+    });
+
 });
