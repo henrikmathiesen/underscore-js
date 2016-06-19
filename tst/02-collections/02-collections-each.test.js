@@ -1,5 +1,13 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+/*
+
+http://underscorejs.org/#each
+each_.each(list, iteratee, [context]) Alias: forEach
+Iterates over a list of elements, yielding each in turn to an iteratee function. The iteratee is bound to the context object, if one is passed. Each invocation of iteratee is called with three arguments: (element, index, list). If list is a JavaScript object, iteratee's arguments will be (value, key, list). Returns the list for chaining. 
+
+*/
+
 describe("02-collections-each", function () {
     
     it("should itterate over an array and give a reference to the element, the index and the whole collection", function () {

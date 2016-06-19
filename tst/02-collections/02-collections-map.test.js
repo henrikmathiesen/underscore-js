@@ -1,5 +1,13 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+/*
+
+http://underscorejs.org/#map
+map_.map(list, iteratee, [context]) Alias: collect
+Produces a new array of values by mapping each value in list through a transformation function (iteratee). The iteratee is passed three arguments: the value, then the index (or key) of the iteration, and finally a reference to the entire list.
+
+*/
+
 describe("02-collections-map", function () {
 
     it("should be able to map out items from an array", function () {

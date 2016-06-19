@@ -1,5 +1,17 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+/*
+
+http://underscorejs.org/#reduce
+reduce_.reduce(list, iteratee, [memo], [context]) Aliases: inject, foldl
+Also known as inject and foldl, reduce boils down a list of values into a single value. Memo is the initial state of the reduction, and each successive step of it should be returned by iteratee. The iteratee is passed four arguments: the memo, then the value and index (or key) of the iteration, and finally a reference to the entire list. 
+
+http://underscorejs.org/#reduceRight
+reduceRight_.reduceRight(list, iteratee, memo, [context]) Alias: foldr
+The right-associative version of reduce. Foldr is not as useful in JavaScript as it would be in a language with lazy evaluation. 
+
+*/
+
 describe("02-collections-reduce", function () {
 
     it("should be able to sum a list of numbers (reduce the list to a single value)", function () {

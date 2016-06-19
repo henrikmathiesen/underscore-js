@@ -1,5 +1,14 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+/*
+
+http://underscorejs.org/#filter
+filter_.filter(list, predicate, [context]) Alias: select
+Looks through each value in the list, returning an array of all the values that pass a truth test (predicate). 
+
+
+*/
+
 describe("02-collection-filter", function () {
 
     it("should be able to filter out values from an array based on a critera", function () {

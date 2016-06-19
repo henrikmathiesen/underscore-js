@@ -1,5 +1,13 @@
 /// <reference path="../../typings/tsd.d.ts" />
 
+/*
+
+http://underscorejs.org/#find
+find_.find(list, predicate, [context]) Alias: detect
+Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test. The function returns as soon as it finds an acceptable element, and doesn't traverse the entire list. 
+
+*/
+
 describe("02-collections-find", function () {
 
     it("should find the first of something in an array based on a criteria", function () {
