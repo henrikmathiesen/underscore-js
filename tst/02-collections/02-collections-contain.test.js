@@ -20,6 +20,17 @@ describe("02-collections-contains", function () {
         expect(_.contains(values, "Yes")).toBe(false);
         expect(_.contains(values, false)).toBe(false);
 
+        var author = {
+            firstName: "Kalle",
+            lastName: "Anka",
+            book: {
+                title: "The Blue Jacket"
+            }
+        };
+
+        expect(_.contains(author, "Anka")).toBe(true);
+        expect(_.contains(author.book, "The Blue Jacket")).toBe(true);
+
     });
 
 });
