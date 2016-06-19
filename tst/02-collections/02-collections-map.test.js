@@ -18,7 +18,7 @@ describe("02-collections-map", function () {
 
     it("should be able to map out items from an object", function () {
 
-       var myObj = { name: 'Henrik', mood: 'Happy' };
+       var myObj = { name: "Henrik", mood: "Happy" };
 
        var producedArray = _.map(myObj, function (value, key) {
            return value + "!";

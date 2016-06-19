@@ -47,7 +47,7 @@ describe("02-collections-each", function () {
     it("should be able to accept a this pointer as last argument 1", function () {
 
         var myObj = {
-            names: ['Adam', 'Bertil', 'Ceasar'],
+            names: ["Adam", "Bertil", "Ceasar"],
             getMessage: function () {
                 return "Hello World";
             }
@@ -67,7 +67,7 @@ describe("02-collections-each", function () {
 
     it("should be able to accept a this pointer as last argument 2", function () {
 
-       var myArray = ['Adam', 'Bertil'];
+       var myArray = ["Adam", "Bertil"];
        var myObj = {
            getMessage: function (name) {
                return "Hi " + name;

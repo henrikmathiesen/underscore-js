@@ -29,15 +29,15 @@ describe("02-collections-reduce", function () {
         var data = {
             products: [
                 {
-                    name: 'Prod A',
+                    name: "Prod A",
                     price: 100
                 },
                 {
-                    name: 'Prod B',
+                    name: "Prod B",
                     price: 200
                 },
                 {
-                    name: 'Prod C',
+                    name: "Prod C",
                     price: 300
                 }
             ]
@@ -55,7 +55,7 @@ describe("02-collections-reduce", function () {
 
     it("can use reduceRight for beginning at the right", function () {
 
-        var someThings = ['Adam', 'Bertil'];
+        var someThings = ["Adam", "Bertil"];
 
         var reducedRight = _.reduceRight(someThings, function (memo, value) {
            return memo + value; 

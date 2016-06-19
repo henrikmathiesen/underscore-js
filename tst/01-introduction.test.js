@@ -44,4 +44,17 @@ describe("Here we make some fun and interesting tests that comes to mind from th
         expect(isObject).toBe(false);
     });
 
+    it("should be a string and it should not be a string", function () {
+        
+        var isString = "Henrik";
+        var isNr = 99;
+
+        var stringCheckOne = (typeof isString == 'string' || isString instanceof String);
+        var stringCheckTwo = (typeof isNr == 'string' || isNr instanceof String);
+
+        expect(stringCheckOne).toBe(true);
+        expect(stringCheckTwo).toBe(false);
+
+    });
+
 });
