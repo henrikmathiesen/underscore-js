@@ -3,8 +3,8 @@
 describe("Here we make some fun and interesting tests that comes to mind from the introduction module of the course", function () {
     
     it("should understand to know if a value is odd or even", function () {
-        expect(4 % 2 == 0).toBe(true, "it is even");
-        expect(3 % 2 == 0).toBe(false, "it is odd");
+        expect(4 % 2 === 0).toBe(true, "it is even");
+        expect(3 % 2 === 0).toBe(false, "it is odd");
     });
 
     it("should be an array, testing the underscore way (source code)", function () {
