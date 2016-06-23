@@ -9,5 +9,15 @@ A function to create flexibly-numbered lists of integers, handy for each and map
 */
 
 describe("03-arrays-range", function () {
-    
+
+    it("should return a list of numbers based on range, start, stop (not including stop value itself) and steps", function () {
+
+        var valuesA = _.range(6);
+        var valuesB = _.range(10, 21, 2);
+
+        expect(valuesA).toEqual([0, 1, 2, 3, 4, 5]);
+        expect(valuesB).toEqual([10, 12, 14, 16, 18, 20]);
+
+    });
+
 });
