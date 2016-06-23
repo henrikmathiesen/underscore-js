@@ -7,6 +7,29 @@ describe("Here we make some fun and interesting tests that comes to mind from th
         expect(3 % 2 === 0).toBe(false, "it is odd");
     });
 
+    it("should understand how jasmine compares value types and reference types", function () {
+        
+        var num = 1;
+        var stringOne = "Henke";
+        var stringTwo = "Henke";
+
+        // When comparing primitives, it does not matter if we use toBe() or toEqual()
+        expect(num).toBe(1);
+        expect(num).toEqual(1);
+        expect(stringOne).toBe(stringTwo);
+        expect(stringOne).toEqual(stringTwo);
+
+        var objOne = { name: "Henke" };
+        var objTwo = { name: "Henke" };
+
+        // However, when comparing reference types it does matter 
+        // toBe() compares if it is the same object in memory
+        // toEqual() compares if the object has the same propeties and values
+        expect(objOne).not.toBe(objTwo);
+        expect(objOne).toEqual(objTwo);
+
+    });
+
     it("should be an array, testing the underscore way (source code)", function () {
         var myArray = ['Adam', 'Bertil', 'Ceasar'];
         var isArray = myArray.length === +myArray.length;
