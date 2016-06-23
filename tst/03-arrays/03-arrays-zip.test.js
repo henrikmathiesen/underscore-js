@@ -9,5 +9,16 @@ Merges together the values of each of the arrays with the values at the correspo
 */
 
 describe("03-arrays-zip", function () {
-    
+
+    it("should merge arrays", function () {
+
+        var arrayOne = ["Adam", "Bertil", "Ceasar"];
+        var arrayTwo = [1, 2, 3];
+
+        var mergedArraysOneTwo = _.zip(arrayOne, arrayTwo);
+
+        expect(mergedArraysOneTwo).toEqual([ ["Adam", 1], ["Bertil", 2], ["Ceasar", 3] ]);
+
+    });
+
 });
