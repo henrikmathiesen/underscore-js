@@ -17,5 +17,32 @@ Uses a binary search to determine the index at which the value should be inserte
 */
 
 describe("03-arrays-indexof-lastindexof-sortedindexof", function () {
-    
+
+    it("should return the index of an item", function () {
+
+        var items = ["Adam", "Bertil"];
+        var itemsToo = ["Adam", "Bertil", "Adam", "Bertil"];
+
+        expect(_.indexOf(items, "Bertil")).toBe(1);
+        expect(_.indexOf(itemsToo, "Bertil", 2)).toBe(3);
+        expect(_.indexOf(items, "Foo")).toBe(-1);
+
+    });
+
+    it("should return the last index where an item is in an array", function () {
+        var itemsToo = ["Adam", "Bertil", "Adam", "Bertil"];
+
+        expect(_.lastIndexOf(itemsToo, "Adam")).toBe(2);
+    });
+
+    it("should give the index of where an item would be inserted in an sorted array", function () {
+
+        var values = [1, 3, 2];
+
+        expect(values.sort()).toEqual([1, 2, 3]);
+        expect(_.sortedIndex(values.sort(), 4)).toBe(3);
+
+    });
+
+
 });
