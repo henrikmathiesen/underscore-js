@@ -35,7 +35,7 @@ describe("03-arrays-indexof-lastindexof-sortedindexof", function () {
         expect(_.lastIndexOf(itemsToo, "Adam")).toBe(2);
     });
 
-    it("should give the index of where an item would be inserted in an sorted array", function () {
+    it("should give the index of where an item would be inserted in an SORTED array", function () {
 
         var values = [1, 3, 2];
 
