@@ -13,8 +13,8 @@
 
     var vm = {
         foo: "bar",
-        sayFoo: function(){
-            console.log(this.foo);
+        sayFoo: function(msg){
+            console.log(this.foo + " " + msg);
         }
     };
 
@@ -27,7 +27,7 @@
     // That can be remedid by _.bindAll
     //$('[data-click-me-b]').on('click', vm.sayFoo);
     
-    // or by _.bind, like here
-    $('[data-click-me-b]').on('click', _.bind(vm.sayFoo, vm));
+    // or by _.bind, like here (can also pass argument)
+    $('[data-click-me-b]').on('click', _.bind(vm.sayFoo, vm, "yeah"));
 
 })();
