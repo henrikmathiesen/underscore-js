@@ -2,6 +2,10 @@
 
 (function(){
 
+
+    //
+    // Call once
+
     var msgCount = 0;
     var msgOnceCount = 0;
 
@@ -16,5 +20,17 @@
     });
 
     $('[data-click-me-for-message-once]').on('click', callOnce);
+
+    //
+    // Call after
+
+    var msgAfterCount = 0;
+
+    var callAfterTwoTimes = _.after(2, function () {
+        msgAfterCount++;
+        $('[data-click-me-for-message-after-two-clicks-output]').html("Hello World! Function has run: " + msgAfterCount + " times");
+    });
+
+    $('[data-click-me-for-message-after-two-clicks]').on('click', callAfterTwoTimes);
 
 })();
