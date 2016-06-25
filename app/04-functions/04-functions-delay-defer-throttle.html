@@ -20,6 +20,16 @@
 
         <div>
             <p>
+                http://underscorejs.org/#delay delay_.delay(function, wait, *arguments) Much like setTimeout, invokes function after wait
+                milliseconds. If you pass the optional arguments, they will be forwarded on to the function when it is invoked.
+            </p>
+            <p>
+                http://underscorejs.org/#defer defer_.defer(function, *arguments) Defers invoking the function until the current call stack
+                has cleared, similar to using setTimeout with a delay of 0. Useful for performing expensive computations
+                or HTML rendering in chunks without blocking the UI thread from updating. If you pass the optional arguments,
+                they will be forwarded on to the function when it is invoked.
+            </p>
+            <p>
                 http://underscorejs.org/#throttle throttle_.throttle(function, wait, [options]) Creates and returns a new, throttled version
                 of the passed function, that, when invoked repeatedly, will only actually call the original function at most
                 once per every wait milliseconds. Useful for rate-limiting events that occur faster than you can keep up
