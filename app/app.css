@@ -34,9 +34,18 @@ h1 {
     text-align: right;
 }
 
+a,
+a:visited,
+a:hover,
+a:active,
 .text-link {
     cursor: pointer;
-    color: darkorange;
+    color: darkmagenta;
+    text-decoration: underline;
+}
+
+li {
+    margin-bottom: 4px;
 }
 
 
