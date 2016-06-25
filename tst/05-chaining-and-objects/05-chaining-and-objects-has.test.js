@@ -8,7 +8,19 @@ Does the object contain the given key? Identical to object.hasOwnProperty(key), 
 
 */
 
-describe("05-chaining-and-objects-has", function(){
+describe("05-chaining-and-objects-has", function () {
+
+
+    it("should return true if object has a property (like javascripts native hasOwnProperty())", function () {
+
+        var myObj = {
+            name: "Henrik"
+        };
+
+        expect(_.has(myObj, 'name')).toBe(true);
+        expect(myObj.hasOwnProperty('name')).toBe(true);
+
+    });
 
 
 
