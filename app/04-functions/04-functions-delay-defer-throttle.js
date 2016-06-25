@@ -8,7 +8,7 @@
 
     console.log("que 1");
     _.defer(function (args) {
-        console.log("I run when callstack is complete (except timeout apperantly) " + args);
+        console.log("I run when callstack is complete (except timeout/delay apperantly) " + args);
     }, "bar");
     console.log("que 2");
 
