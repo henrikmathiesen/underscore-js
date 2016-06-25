@@ -10,6 +10,16 @@ Returns a sorted list of the names of every method in an object — that is to s
 
 describe("05-chaining-and-objects-functions", function () {
 
+    it("should return how many functions an object has", function(){
 
+        var vm = {
+            funcOne: function(){},
+            funcTwo: function(){}
+        };
+
+        expect(_.functions(vm).length).toBe(2);
+        expect(_.functions(vm).shift()).toBe("funcOne");
+        expect(_.functions(vm).pop()).toBe("funcTwo");
+    });
 
 });
