@@ -73,4 +73,52 @@
 
     $('[data-template-from-markup]').html(_.template($('#template-from-markup').html())({ games: games }));
 
+    //
+    //
+    // =============================================================================================================================================
+    //
+    //
+    // A note about increasing performance (only worth it if working with really large data sets)
+    // - We can change the scope that is found within the template
+    // - By default, the passed in object is the object for the template
+    // - We can however create our own scope ...
+
+    // default
+    var templateLocalScope = [
+        '<ul>',
+            '<% _.each(books, function(book){ %>',
+                '<li><%= book.title %></li>',
+            '<%})%>',
+        '</ul>'
+    ].join('');
+
+    // variable scope
+    var templateVariableScope = [
+        '<ul>',
+            '<% _.each(data.books, function(book){ %>',
+                '<li><%= book.title %></li>',
+            '<%})%>',
+        '</ul>'
+    ].join('');
+
+    // vm
+    var books = [
+        {
+            title: "A"
+        },
+        {
+            title: "B"
+        },
+        {
+            title: "C"
+        }
+    ];
+
+    // default
+    $('[data-template-local-scope]').html(_.template(templateLocalScope)({ books: books }));
+
+    // Pluralsight teacher says this is a performance boost when dealing with large data sets
+    var settings = { variable: 'data' };
+    $('[data-template-variable-scope]').html(_.template(templateVariableScope, settings)({ books: books }));
+
 })();
