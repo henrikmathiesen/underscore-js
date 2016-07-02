@@ -21,8 +21,71 @@ Fill in undefined properties in object with the first value present in the follo
 */
 
 
-describe("05-chaining-and-objects-extend-pick-omit-default", function(){
+describe("05-chaining-and-objects-extend-pick-omit-default", function () {
 
+    it("should copy all properties from an object over to another object and return it", function () {
 
+        var author = {
+            name: "Adam",
+            foo: "will be overridden"
+        };
+
+        var contactInfo = {
+            email: "adam@am.com",
+            foo: "will override"
+        };
+
+        var extended = _.extend(author, contactInfo);
+
+        expect(extended).toEqual({ name: "Adam", email: "adam@am.com", foo: "will override" });
+
+    });
+
+    it("should return a copy of the object with the properties matching a whitelist", function () {
+
+        var game = {
+            title: "Mass Effect",
+            rating: 8
+        };
+
+        var picked = _.pick(game, ['title']);
+
+        expect(picked).toEqual({ title: "Mass Effect" });
+
+    });
+
+    it("should return a copy of the object with the properties not omitted by a blacklist", function () {
+
+        var game = {
+            title: "Mass Effect",
+            rating: 8
+        };
+
+        var omitted = _.omit(game, ['rating']);
+
+        expect(omitted).toEqual({ title: "Mass Effect" });
+
+    });
+
+    it("should fill in the undefined properties with default value", function () { 
+
+        var gameOne = {
+            name: "Mass Effect",
+            rating: 8
+        };
+
+        var gameTwo = {
+            name: "Dragon Age",
+            rating: 9
+        };
+
+        var defaults = {
+            cat: "RPG"
+        };
+
+        expect(_.defaults(gameOne, defaults)).toEqual({ name: "Mass Effect", rating: 8, cat: "RPG" });
+        expect(_.defaults(gameTwo, defaults)).toEqual({ name: "Dragon Age", rating: 9, cat: "RPG" });
+
+    });
 
 });
