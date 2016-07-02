@@ -83,6 +83,8 @@ describe("05-chaining-and-objects-extend-pick-omit-default", function () {
             cat: "RPG"
         };
 
+        // if same properties, defaults will override (just like _.extend)
+
         expect(_.defaults(gameOne, defaults)).toEqual({ name: "Mass Effect", rating: 8, cat: "RPG" });
         expect(_.defaults(gameTwo, defaults)).toEqual({ name: "Dragon Age", rating: 9, cat: "RPG" });
 
