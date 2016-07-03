@@ -59,6 +59,7 @@
             For performance reasons, if using a template over and over again, dont run the compile process every time
             Instead store the compiled template in a variable and reuse it
             var compiledTemplate = _.template(templateLoop)({ games: games })
+            Or for reuse with different data: var template = _.template(templateLoop); template(vm); template(vmToo);
     */
 
     //
