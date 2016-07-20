@@ -85,4 +85,44 @@ describe("Here we make some fun and interesting tests that comes to mind from th
 
     });
 
+    it("should change an item in an array A", function(){
+        var myArray = [
+            {
+                id: 1,
+                name: "Adam"
+            },
+            {
+                id: 2,
+                name: "Bertil"
+            }
+        ];
+
+        var myObj = { id: 2, name: "Ceasar" };
+
+        myArray[1] = myObj;
+
+        expect(myArray[1].name).toEqual("Ceasar");
+        expect(myArray.length).toEqual(2);
+    });
+
+    it("should change an item in an array B", function(){
+        var myArray = [
+            {
+                id: 1,
+                name: "Adam"
+            },
+            {
+                id: 2,
+                name: "Bertil"
+            }
+        ];
+
+        var myObj = { id: 2, name: "Ceasar" };
+
+        myArray.splice(1, 1, myObj);
+
+        expect(myArray[1].name).toEqual("Ceasar");
+        expect(myArray.length).toEqual(2);
+    });
+
 });
