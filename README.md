@@ -1,4 +1,4 @@
-# underscoreJs
+# underscore JS
 
 I need to learn more about this lib. And what better way to do that than a Pluralsight course?
 
