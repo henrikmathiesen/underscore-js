@@ -1,12 +1,12 @@
 {
-  "name": "underscorejs",
+  "name": "underscore-js",
   "description": "I need to learn more about this lib. And what better way to do that than a Pluralsight course?",
   "main": "index.js",
   "authors": [
     "Henrik <henrik_mathiesen@hotmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/henrikmathiesen/underscoreJs",
+  "homepage": "https://github.com/henrikmathiesen/underscore-js",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.0.0",
-    "underscore": "^1.8.3"
+    "jquery": "3.0.0",
+    "underscore": "1.8.3"
   }
 }
